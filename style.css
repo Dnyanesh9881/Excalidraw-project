@@ -96,7 +96,7 @@ main{
    } 
    .middle-section-buttons{
     width: 100%;
-  
+    border-radius: 10px;
     color: #797777;
     border: none;
     background-color: white;
@@ -104,16 +104,19 @@ main{
     justify-content: space-between;
     padding: 0.8rem;
    }
-  
+.button:hover{
+  background-color: #e9e9fb;
+  }
 .my-footer {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items:center;
   padding: 0rem 1rem;
   position: absolute;
   bottom:1rem;
   box-sizing: border-box;
+  height: fit-content;
 }
 .left-footer {
   display: flex;
@@ -122,8 +125,9 @@ main{
   border: none;
   padding: 4px 10px;
   color: #797777;
+  background-color: #efebeb;
+  
 }
-
-.help-section {
-
+.footer-buttons:hover{
+  background-color: #e9e9fb;
 }
