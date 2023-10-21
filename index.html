@@ -18,13 +18,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
+    <!-- <link
       rel="preload"
       href="/Virgil.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
-    />
+    /> -->
   </head>
   <body>
     <!-- <div class="main_container"> -->
@@ -48,7 +48,7 @@
             <i class="fa-solid fa-arrow-right"></i>
           </div>
           <div class="menu-buttons"><i class="fa-solid fa-minus"></i></div>
-          <div class="menu-buttons"><i class="fa-solid fa-pencil"></i></div>
+          <div class="menu-buttons" id="pencil"><i class="fa-solid fa-pencil"></i></div>
           <div class="menu-buttons"><i class="fa-solid fa-a"></i></div>
           <div class="menu-buttons"><i class="fa-regular fa-image"></i></div>
           <div class="menu-buttons"><i class="fa-solid fa-eraser"></i></div>
@@ -56,6 +56,7 @@
           <div class="menu-buttons">
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
+          <input type="color" id="color-picker">
         </div>
         <div>
           <button class="live-collaboration">
@@ -66,7 +67,8 @@
           </button>
         </div>
       </nav>
-      <main>
+      <canvas id="canvas"></canvas>
+      <!-- <main>
         <div class="middle-section">
           <div>
             <svg
@@ -147,7 +149,7 @@
             </a>
           </div>
         </div>
-      </main>
+      </main> -->
       <footer class="my-footer">
         <div class="left-footer">
           <div style="border-radius: 10px; padding :5px; display: flex; align-items: center; margin-right: 0.8rem">
@@ -200,7 +202,7 @@
         </div>
       </footer>
     </div>
-
+   
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -211,5 +213,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
+    <script src="freeehand.js"></script>
   </body>
 </html>
