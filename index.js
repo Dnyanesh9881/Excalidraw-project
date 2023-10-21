@@ -39,7 +39,7 @@ function onMouseDown1(event){
     ct.beginPath();
     ct.moveTo(clientX, clientY);
    
-    ct.lineWidth=4;
+    
 }
 function onMouseUp1(event){
     let {clientX, clientY} =event;
