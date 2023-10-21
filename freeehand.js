@@ -1,4 +1,4 @@
-
+//   for free hand drawing
  let pencil=document.getElementById("pencil");
 
  let isPencilActive=false;
@@ -23,3 +23,28 @@
      }
      }
 
+//  for Straigth line
+     let line=document.getElementById("line");
+     let isLineActive=false;
+
+     line.addEventListener("click", onLineClick);
+ 
+ colorPicker.addEventListener("change", ()=>{
+          drawingColor=colorPicker.value;
+          ct.strokeStyle=drawingColor;
+
+ })
+   function onLineClick(){
+      line.classList.toggle("active");
+      isLineActive=!isLineActive;
+      if(isLineActive){
+       
+         canva.addEventListener("mousedown", onMouseDown1);
+         canva.addEventListener("mouseup", onMouseUp1);
+         
+      }else{
+         canva.removeEventListener("mousedown", onMouseDown1);
+         canva.removeEventListener("mouseup", onMouseUp1);
+      }
+     
+   }  

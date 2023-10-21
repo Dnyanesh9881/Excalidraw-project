@@ -5,23 +5,7 @@ canva.height=window.innerHeight;
 
 const ct=canva.getContext("2d");
 
-// canva.addEventListener("mousedown", onMouseDown);
-// canva.addEventListener("mouseup", onMouseUp);
 
-// function onMouseDown(event){
-//     let {clientX, clientY} =event;
-//     ct.beginPath();
-//     ct.moveTo(clientX, clientY);
-//     ct.strokeStyle="red"
-//     ct.lineWidth=4;
-// }
-// function onMouseUp(event){
-//     let {clientX, clientY} =event;
-    
-//     ct.lineTo(clientX, clientY);
-//     ct.stroke();
-//     ct.closePath();
-// }
     let drawingColor="black";
 // canva.addEventListener("mousedown", onMouseDown);
    let previousPosition=null;
@@ -44,4 +28,23 @@ function onMouseMove(e){
 function onMouseUp(e){
 
     canva.removeEventListener("mousemove", onMouseMove);
+}
+
+
+//  canva.addEventListener("mousedown", onMouseDown1);
+// canva.addEventListener("mouseup", onMouseUp1);
+
+function onMouseDown1(event){
+    let {clientX, clientY} =event;
+    ct.beginPath();
+    ct.moveTo(clientX, clientY);
+   
+    ct.lineWidth=4;
+}
+function onMouseUp1(event){
+    let {clientX, clientY} =event;
+    
+    ct.lineTo(clientX, clientY);
+    ct.stroke();
+    ct.closePath();
 }
