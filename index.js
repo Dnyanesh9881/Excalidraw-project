@@ -4,16 +4,24 @@ canva.width=window.innerWidth;
 canva.height=window.innerHeight;
 const parameters=document.querySelector(".strock-color-width");
 const menuButtons=document.querySelectorAll(".btn");
+const colorPicker=document.querySelector(".color-Picker");
+
+
+let strockParameters={
+    strockwidth:2,
+    strockcolor:"black", 
+}
+
+
+
 
 const ct=canva.getContext("2d");
 
 // let drawingHistory=[];
 // let pathTrack=0;
 
-let strockParameters={
-    strockwidth:2,
-    strockcolor:"black", 
-}
+
+
 
 function onClickInput(element){
        let valuep=element.value;

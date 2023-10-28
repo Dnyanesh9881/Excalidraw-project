@@ -1,7 +1,10 @@
 let history=[];
 let historyIndex=-1;
 
+let redoArray=[];
+
 let initialPosition=null;
+
 
 function onMouseDown(e){
 
