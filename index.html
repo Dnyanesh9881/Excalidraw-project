@@ -35,28 +35,28 @@
         </button>
 
         <div class="middle-buttons">
-          <div class="menu-buttons"><i class="fa-solid fa-lock"></i></div>
-          <div class="vertical-line"></div>
+          <!-- <div class="menu-buttons"><i class="fa-solid fa-lock"></i></div> -->
+          <!-- <div class="vertical-line"></div>
           <div class="menu-buttons">
             <i class="fa-solid fa-arrow-pointer"></i>
-          </div>
-          <div class="menu-buttons"><i class="fa-regular fa-hand"></i></div>
-          <div class="menu-buttons"><i class="fa-regular fa-square"></i></div>
-          <div class="menu-buttons"><i class="fa-solid fa-diamond"></i></div>
-          <div class="menu-buttons"><i class="fa-regular fa-circle"></i></div>
-          <div class="menu-buttons">
+          </div> -->
+          <!-- <div class="menu-buttons"><i class="fa-regular fa-hand"></i></div> -->
+          <div class="menu-buttons btn" onclick="onActionClick(this)"  id="rectangle"><i class="fa-regular fa-square"></i></div>
+         
+          <div class="menu-buttons btn" onclick="onActionClick(this)" id="circle"><i class="fa-regular fa-circle"></i></div>
+          <!-- <div class="menu-buttons btn">
             <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <div class="menu-buttons" id="line"><i class="fa-solid fa-minus"></i></div>
-          <div class="menu-buttons" id="pencil"><i class="fa-solid fa-pencil"></i></div>
-          <div class="menu-buttons"><i class="fa-solid fa-a"></i></div>
-          <div class="menu-buttons"><i class="fa-regular fa-image"></i></div>
-          <div class="menu-buttons"><i class="fa-solid fa-eraser"></i></div>
-          <div class="vertical-line"></div>
-          <div class="menu-buttons">
+          </div> -->
+          <div class="menu-buttons btn" onclick="onActionClick(this)" id="line"><i class="fa-solid fa-minus" ></i></div>
+          <div class="menu-buttons btn" onclick="onActionClick(this)" id="pencil"><i class="fa-solid fa-pencil"></i></div>
+          <!-- <div class="menu-buttons btn"><i class="fa-solid fa-a"></i></div> -->
+          <!-- <div class="menu-buttons btn"><i class="fa-regular fa-image"></i></div> -->
+          <div class="menu-buttons btn" id="eraser" onclick="onActionClick(this)"><i class="fa-solid fa-eraser"></i></div>
+          <!-- <div class="vertical-line"></div> -->
+          <!-- <div class="menu-buttons btn">
             <i class="fa-solid fa-ellipsis-vertical"></i>
-          </div>
-          <input type="color" id="color-picker" class="ms-2 me-2">
+          </div> -->
+          <!-- <input type="color" id="color-picker" class="ms-2 me-2"> -->
         </div>
         <div class="right-section-navbar">
           <button class="live-collaboration">
@@ -152,26 +152,27 @@
       </main> -->
       <footer class="my-footer">
         <div class="left-footer">
-          <div style="border-radius: 10px; padding :5px; display: flex; align-items: center; margin-right: 0.8rem">
+          <div class="zoom">
             <button class="footer-buttons">
               <i class="fa-solid fa-plus" style="color: #797777"></i>
             </button>
-            <div class="vertical-line"></div>
-            <button class="footer-buttons">70%</button>
-            <div class="vertical-line"></div>
+            <div class="vertical-line1"></div>
+            <button class="footer-buttons">100%</button>
+            <div class="vertical-line1"></div>
             <button class="footer-buttons">
               <i class="fa-solid fa-minus" style="color: #797777"></i>
             </button>
           </div>
-          <div style="border-radius: 10px; display: flex;align-items: center;">
-            <button class="footer-buttons">
+          <div class="undo-redo">
+            <button class="footer-buttons" id="undo">
               <i
                 class="fa-solid fa-arrow-turn-up fa-rotate-270"
                 style="color: #797777"
+                
               ></i>
             </button>
-            <div class="vertical-line"></div>
-            <button class="footer-buttons">
+            <div class="vertical-line1"></div>
+            <button class="footer-buttons" id="redo">
               <i
                 class="fa-solid fa-arrow-turn-down fa-rotate-270"
                 style="color: #797777"
@@ -183,8 +184,8 @@
           <svg
             style="color: white; background: #5b57d1"
             xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
+            width="20"
+            height="20"
             fill="currentColor"
             class="bi bi-shield-check"
             viewBox="0 0 16 16"
@@ -196,11 +197,21 @@
               d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"
             />
           </svg>
-          <button class="footer-buttons" style="border-radius: 10px">
+          <button class="footer-buttons ms-3" style="border-radius: 10px">
             <i class="fa-regular fa-circle-question"></i>
           </button>
         </div>
       </footer>
+      <div class="strock-color-width hide" >
+        <form class="form">
+          <label for="strockwidth">StrockWidth</label>
+          <input type="range" name="strockwidth" onclick="onClickInput(this)" min="2" max="30">
+          <label for="strockcolor">StrockColor</label>
+          <input type="color" name="strockcolor" id="color-picker" onclick="onClickInput(this)" >
+          <!-- <buton class="apply">Apply</buton>
+          <button class="reset">Reset</button> -->
+        </form>
+      </div>
     </div>
    
     <script
@@ -214,7 +225,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./index.js"></script>
-    <script src="freeehand.js"></script>
     <script src="line.js"></script>
+    <script src="undo-redo.js"></script>
   </body>
 </html>
