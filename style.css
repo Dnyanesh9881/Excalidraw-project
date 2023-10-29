@@ -27,7 +27,7 @@ body {
    z-index: 5;
   color: #797777;
 }
-
+canva
 .menu-buttons {
   padding: 10px;
   border-radius: 10px;
@@ -79,9 +79,9 @@ body {
   border: 1px solid #dfdbdb;
   height: 25px;
 }
-/* .canvas{
- 
-} */
+.canvas{
+ z-index: 100;
+}
 main{
     height: 100%;
     width: 100%;

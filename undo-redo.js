@@ -8,7 +8,7 @@ function onClickUndo(){
     if(historyIndex!==-1){
     //     redoArray.push(history[historyIndex]);
     //    redoIndex++;
-        history.pop();
+        // history.pop();
         historyIndex --;
 
     if(historyIndex===-1){
@@ -17,14 +17,25 @@ function onClickUndo(){
     else{
         ct.putImageData(history[historyIndex], 0, 0);
     }
+   
 }
 }
 function onClickRedo(){
-//    if(redoArray.length>=0){
-   
-//     ct.putImageData(redoArray[redoIndex-1], 0, 0);
-//     redoIndex--;
-//    }
+   if( historyIndex<history.length-1){
+    historyIndex++;
+    if(historyIndex!==-1){
+        // historyIndex++;
+//    history.push(redoArray[redoIndex]);
+//        historyIndex++;
+    ct.putImageData(history[historyIndex], 0, 0);
+    // redoIndex--;
+    // redoArray.pop();
+    // redoIndex--;
+    }
+    
+
+   }
+  
     
 }
 undo.addEventListener("click", onClickUndo);
