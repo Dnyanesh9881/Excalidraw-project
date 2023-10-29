@@ -4,7 +4,7 @@ canva.width=window.innerWidth;
 canva.height=window.innerHeight;
 const parameters=document.querySelector(".strock-color-width");
 const menuButtons=document.querySelectorAll(".btn");
-const colorPicker=document.querySelector(".color-Picker");
+
 
 
 let strockParameters={
@@ -12,7 +12,10 @@ let strockParameters={
     strockcolor:"black", 
 }
 
-
+function onChangeColor(e){
+    strockParameters.strockcolor=e.value;
+    console.log(e.value);
+}
 
 
 const ct=canva.getContext("2d");

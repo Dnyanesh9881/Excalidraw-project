@@ -6,6 +6,8 @@ let redoArray=[];
 let initialPosition=null;
 
 
+
+
 function onMouseDown(e){
 
 if(!(actions.circle || actions.eraser || actions.line || actions.pencil || actions.rectangle)){
